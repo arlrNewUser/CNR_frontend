@@ -1,0 +1,113 @@
+
+main.calendario {
+    background-color: antiquewhite;
+}
+
+main.calendario .info {
+    background-color: #b2d2c3;
+    padding: 3em 0;
+}
+
+main.calendario .info .menu {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    align-items: center;
+    font-weight: 800;
+    color: #f0b50c;
+}
+
+main.calendario .info .menu h2 {
+    margin: 0;
+}
+
+main.calendario .info .menu > a {
+    color: #ffffff;
+}
+
+main.calendario .info .menu > a:hover {
+    color: black;
+}
+
+main.calendario .info .menu h2 a {
+    color: #f0b50c;
+    text-decoration: none;
+}
+
+main.calendario .info .menu h2 a:hover {
+    color: #ffffff;
+}
+main.calendario .info .month {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+}
+
+main.calendario .calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr));
+    justify-content: center;
+}
+
+main.calendario .calendar article.card {
+    padding: 2rem;
+}
+
+main.calendario .calendar article.card.c {
+    color: aqua;
+}
+
+main.calendario .calendar article.card:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+main.calendario .calendar article.card:nth-child(even) {
+    background-color: #f0b50c;
+}
+
+main.calendario .calendar article.card:nth-child(-1) {
+    background-color: #504834;
+}
+
+
+main.calendario .calendar article.card .card__title {
+    text-align: center;
+    padding: 5px 0;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+main.calendario .calendar article.card h3 {
+    display: block;
+    margin: 0;
+    font-size: 36px;
+}
+
+main.calendario .calendar article.card h3 span {
+    display: block;
+    font-size: 18px;
+}
+
+main.calendario .calendar article.card .card__content {
+    display: flex;
+    margin: 1em 0;
+    gap: 1em;
+    flex-direction: column;
+    text-align: left;
+    font-size: 25px;
+}
+
+main.calendario .calendar article.card .card__content div h4 {
+    display: inline;
+    margin: 0;
+}
+
+main.calendario .calendar article.card .card__content div p {
+    display: inline;
+    margin: 0;
+}
