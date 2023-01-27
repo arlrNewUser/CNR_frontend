@@ -1,48 +1,46 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import PublicLayout from "./layout/PublicLayout";
-import Inicio from "./pages/PublicPages/Inicio";
-import Nosotros from "./pages/PublicPages/Nosotros";
-
-import MenuLayout from "./layout/MenuLayout";
-import Calendario from "./pages/MenuPages/Calendario";
-
 import AuthLayout from "./layout/AuthLayout";
-import Login from "./pages/AuthPages/Login";
-import Register from "./pages/AuthPages/Register";
-import ConfirmUser from "./pages/AuthPages/ConfirmUser";
+import ProtectedLayout from "./layout/ProtectedLayout";
+import PublicLayout from "./layout/PublicLayout";
 
+import Login from "./pages/AuthPages/Login";
+
+import Admin from "./pages/AdminPages/Admin";
 import Calendar from "./pages/AdminPages/Calendar";
+import Encuestas from "./pages/AdminPages/Encuestas";
+
+import MenuDay from "./pages/MenuPages/MenuDay";
+
+import { AuthProvider } from './context/AuthProvider'
+import { MenusProvider } from "./context/MenusProvider";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+        <AuthProvider>
+            <MenusProvider>
+                <Routes>
+                    <Route path="/" element={<PublicLayout />}>
+                        <Route index element={<MenuDay />}/>
+                        <Route path="menu" element={<MenuDay />}/>
+                        <Route path="*" element={<Navigate to="/menu" />} />
+                    </Route>
 
-        <Route path="/" element={<PublicLayout />}>
-          <Route index element={<Inicio />}/>
-          <Route path="nosotros" element={<Nosotros />}/>
-          <Route path="*" element={<Navigate to="/" />} />
-        </Route>
+                    <Route path="/app" element={<AuthLayout />}>
+                        <Route index element={<Login />}/>
+                        <Route path="*" element={<Navigate to="/app" />} />
+                    </Route>
 
-        <Route path="/menu" element={<MenuLayout />}>
-          <Route index element={<Calendario />}/>
-          <Route path="*" element={<Navigate to="/menu" />} />
-        </Route>
-
-        <Route path="/auth" element={<AuthLayout />}>
-          <Route index element={<Login />}/>
-          <Route path="registrar" element={<Register />}/>
-          <Route path="confirmar/:id" element={<ConfirmUser />}/>
-          <Route path="*" element={<Navigate to="/auth" />} />
-        </Route>
-
-        <Route path="/admin" element={<MenuLayout />}>
-          <Route index element={<Login />}/>
-          <Route path="calendar" element={<Calendar />}/>
-        </Route>
-
-      </Routes>
+                    <Route path="/app/admin" element={<ProtectedLayout />}>
+                        <Route index element={<Admin />}/>
+                        <Route path="calendar" element={<Calendar />}/>
+                        <Route path="encuestas" element={<Encuestas />}/>
+                        <Route path="*" element={<Navigate to="/app/admin" />} />
+                    </Route>
+                </Routes>
+            </MenusProvider>
+        </AuthProvider>
     </BrowserRouter>
   );
 }

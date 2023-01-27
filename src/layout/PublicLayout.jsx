@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom"
-import PublicHeader from "../components/PublicHeader";
-import PublicFooter from "../components/PublicFooter";
+import PublicHeader from "../components/PublicHeader"
+import PublicFooter from "../components/PublicFooter"
+
 
 const PublicLayout = () => {
     return (
         <>
             <PublicHeader />
-            <Outlet />
+                <Outlet />
             <PublicFooter />
         </>
     );

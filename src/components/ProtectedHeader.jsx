@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom'
+import useAuth from "../hooks/useAuth";
+import { Link } from "react-router-dom";
 
-const PublicHeader = () => {
+const ProtectedHeader = () => {
+    const { auth, cerrarSesion } = useAuth();
+
     return (
-        <header className='public'>
+        <header className='protected'>
             <div className="info">
                 <div style={{fontWeight: '600',}}>
                     Nutricionistas especializados con estándares de calidad
@@ -30,12 +33,19 @@ const PublicHeader = () => {
                 </div>
             </div>
             <nav>
-                <Link className="center" to="/">
-                    <img src="/images/logo-1.png" alt="Centro Nutricional Rodriguez" style={{width: '245px',}} />
-                </Link>
+                <div className="logo">
+                    <Link className="center" to="/app/admin">
+                        <img src="/images/logo-1.png" alt="Centro Nutricional Rodriguez" style={{width: '200px',}} />
+                    </Link>
+                </div>
+                <div className="user">
+                    <button onClick={cerrarSesion}>
+                        Cerrar sesión
+                    </button>
+                </div>
             </nav>
         </header>
-    );
+    )
 }
 
-export default PublicHeader;
+export default ProtectedHeader;

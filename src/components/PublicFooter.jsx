@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const PublicFooter = () => {
     return (
-        <footer> 
+        <footer className='public'> 
             <div className="info">
                 <div> 
                     <h5>
