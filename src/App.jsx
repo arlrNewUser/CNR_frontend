@@ -17,7 +17,7 @@ import { MenusProvider } from "./context/MenusProvider";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/menu">
         <AuthProvider>
             <MenusProvider>
                 <Routes>
