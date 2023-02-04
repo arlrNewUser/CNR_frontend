@@ -31,7 +31,7 @@ const PublicHeader = () => {
             </div>
             <nav>
                 <Link className="center" to="/">
-                    <img src="/images/logo-1.png" alt="Centro Nutricional Rodriguez" style={{width: '245px',}} />
+                    <img src="/menu/images/logo-1.png" alt="Centro Nutricional Rodriguez" style={{width: '245px',}} />
                 </Link>
             </nav>
         </header>
