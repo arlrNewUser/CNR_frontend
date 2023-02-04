@@ -23,8 +23,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<PublicLayout />}>
                         <Route index element={<MenuDay />}/>
-                        <Route path="menu" element={<MenuDay />}/>
-                        <Route path="*" element={<Navigate to="/menu" />} />
+                        <Route path="*" element={<Navigate to="/" />} />
                     </Route>
 
                     <Route path="/app" element={<AuthLayout />}>
