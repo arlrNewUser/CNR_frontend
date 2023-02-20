@@ -9,7 +9,12 @@ const PublicFooter = () => {
                         Dónde estamos
                     </h5>
                     <a href="#">
-                        Calle Francisco Villareal 605<br />San Isidro
+                        Psje. Don Alejo Mz.B,<br />Santiago de Surco - Lima.
+                    </a>
+                    <a href="#" style={{
+                        marginTop: "0.25em"
+                    }}>
+                        Av. Alfonso Ugarte 524,<br />Cercado de Arequipa - Arequipa.
                     </a>
                 </div>
                 <div> 
@@ -18,11 +23,11 @@ const PublicFooter = () => {
                     </h5>
                     <a href="#">
                         <i className="fa fa-phone" /> 
-                        &nbsp;Celular: 922 969 240
+                        &nbsp;Celular: 983 503 728
                     </a>
                     <a href="#">
                         <i className="fa fa-phone" /> 
-                        &nbsp;Celular: 986 294 384
+                        &nbsp;Celular: 942 849 532
                     </a>
                     <a href="#">
                         Te llamamos nosotros

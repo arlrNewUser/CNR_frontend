@@ -15,14 +15,14 @@ const PublicHeader = () => {
                     <a href="https://www.instagram.com/centro_nutricional_rodriguez/?hl=es-la" target="_blank">
                         <i className="fa-brands fa-instagram fa-lg"></i>
                     </a>
-                    <a href="https://api.whatsapp.com/send?phone=51922969240&amp;text=Necesito información" target="_blank">
+                    <a href="https://api.whatsapp.com/send?phone=51983503728&amp;text=Necesito información" target="_blank">
                         <i className="fa-brands fa-whatsapp fa-lg"></i>
                     </a>
                 </div>
                 <div className="divisor" style={{borderLeft: '1px solid #42657F',}}></div>
                 <div className="cellphone">
                     <i className="fa-solid fa-mobile-screen-button"></i>
-                    &nbsp;Cel.: 922969240 / 986294384
+                    &nbsp;Cel.: 983503728 / 942849532
                 </div>
                 <div>
                     <i className="fa-solid fa-envelope"></i>
